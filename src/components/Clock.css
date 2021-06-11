@@ -1,0 +1,169 @@
+.light {
+  --background: #f5f5f5;
+}
+
+.dark {
+  --background: #464646;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dedede;
+}
+
+.mainBox {
+  width: 300px;
+  height: 550px;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--background);
+}
+
+.notification-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.network {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.battery {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.battery fa-battery-half {
+  color: #c9c9c9;
+}
+
+.network span,
+.battery span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #e67253;
+}
+
+.clockBox {
+  position: relative;
+  height: 220px;
+  width: 220px;
+  margin: 10px auto;
+  background-color: #e67253;
+  border-radius: 50%;
+}
+
+.clockBox::before {
+  content: "";
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: var(--background);
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.301);
+}
+
+.clockBox::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #c9c9c9;
+}
+
+.min,
+.hr,
+.sec {
+  position: absolute;
+  transform: rotate(0deg);
+  transform-origin: bottom center;
+}
+
+.min {
+  height: 100px;
+  width: 4px;
+  background-color: #c9c9c9;
+  margin: auto;
+  top: 5%;
+  left: 49%;
+  border-radius: 2px;
+}
+
+.hr {
+  height: 70px;
+  width: 5px;
+  background-color: #c9c9c9;
+  margin: auto;
+  top: 18%;
+  left: 49%;
+  border-radius: 2px;
+}
+
+.sec {
+  height: 110px;
+  width: 2px;
+  background-color: #c9c9c9;
+  margin: auto;
+  top: 0%;
+  left: 49.5%;
+  border-radius: 2px;
+}
+
+.med {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%);
+  color: #e67253;
+}
+
+.info {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.temp {
+  color: #e67253;
+  font-size: 20px;
+}
+
+.basic {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.basic .city {
+  font-size: 25px;
+  color: #c9c9c9;
+}
+
+.base .date {
+  font-size: 14px;
+  color: #e67253;
+}
+
+.mode {
+  margin-top: 70px;
+  font-size: 20px;
+  color: #e67253;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+}
